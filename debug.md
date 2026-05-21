@@ -13,3 +13,12 @@ Fix:
 
     To:
     llama-3.3-70b-versatile
+
+
+
+Problem2:
+tried making chatbot memory by giving a list of lists instead of just appending the dictionaries
+
+Fix: 
+    changed it by just appending dictionaries to conversation and then setting 
+    message = conversation

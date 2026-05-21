@@ -9,14 +9,20 @@ client = OpenAI(
     base_url= "https://api.groq.com/openai/v1"
 )
 
-response =client.chat.completions.create(
-    model ="llama-3.3-70b-versatile",
-    messages=[
-        {
-            "role":"user",
-            "content": "Say hello like a mentor"
-        }
-    ]
-)
-
-print(response.choices[0].message.content)
+conversation = [{
+    "role":"System",
+    "content": "You are a strict AI mentor helping a developer improve quickly."
+}] 
+while True:
+    user_input = input("You : ")
+    conversation.append({"role":"user","content":user_input})
+    if user_input.lower() == "exit":
+        break
+    ai_response = client.chat.completions.create(
+        model ="llama-3.3-70b-versatile",
+        messages=conversation
+    )
+    ai_message = ai_response.choices[0].message.content
+    print(f"LLM : {ai_message}")
+    conversation.append({"role":"assistant","content":ai_message})
+   
