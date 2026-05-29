@@ -1,0 +1,16 @@
+ChatCompletionChunk(id='chatcmpl-3d3b29d1-9d13-44e4-81d7-15075df62f74',
+ choices=[Choice(delta=ChoiceDelta(content="'s",
+ function_call=None,
+ refusal=None,
+ role=None,
+ tool_calls=None),
+ finish_reason=None,
+ index=0,
+ logprobs=None)
+],
+ created=1779383157,
+ model='llama-3.3-70b-versatile',
+ object='chat.completion.chunk',
+ service_tier=None,
+ system_fingerprint='fp_dae98b5ecb',
+ usage=None)
