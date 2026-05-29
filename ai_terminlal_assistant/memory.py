@@ -21,7 +21,7 @@ def load_memory():
         conversation = json.load(file)
     return conversation
 
-def update_memory(conversation):
+def save_conversation(conversation):
     with open("chat_history.json","w",encoding='utf8')as f:
         json.dump(conversation,f,indent = 4)
 
