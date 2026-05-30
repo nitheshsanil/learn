@@ -1,9 +1,9 @@
-from config import client
+from config import client,MODEL_NAME
 
 def generate_response(conversation):
     try:
         ai_response = client.chat.completions.create(
-            model ="llama-3.3-70b-versatile",
+            model =MODEL_NAME,
             messages=conversation,
             stream=True
         )
