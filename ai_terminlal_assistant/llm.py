@@ -21,4 +21,3 @@ def generate_response(conversation):
         llm_response = {"role":"assistant","content":final_message}
         print("something went wrong",final_message)
         return llm_response
-    

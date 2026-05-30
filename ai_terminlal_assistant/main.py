@@ -42,7 +42,6 @@ while True:
     elif user_input.lower() == "/clear":
        print("clearing previous convesations....")
        conversation = clear() 
-    
     else:
         handle_chat(user_input)
 
